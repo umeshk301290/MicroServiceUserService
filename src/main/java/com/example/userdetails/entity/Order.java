@@ -19,8 +19,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Setter
-@Getter
 @ToString
 @Table(name = "orderinfo")
 public class Order {
@@ -43,4 +41,39 @@ public class Order {
 	@JsonProperty
 	@NotNull
 	Long userId;
+
+	public Long getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
+	}
+
+	public BigDecimal getOrderAmount() {
+		return orderAmount;
+	}
+
+	public void setOrderAmount(BigDecimal orderAmount) {
+		this.orderAmount = orderAmount;
+	}
+
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+	
+	
+	
 }
